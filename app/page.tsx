@@ -97,7 +97,7 @@ function RoadmapVisual() {
   };
 
   const [{ total, completed, pct }, setProg] = useState(() => computeProgress());
-  const [totalHours, setTotalHours] = useState(0);
+  const [totalHours, setTotalHours] = useState<number>(0);
 
   const prevPct = useRef(pct);
   const [pulse, setPulse] = useState(false);
@@ -309,10 +309,10 @@ function TimelineItem({ stage, index, total, computeStagePct, onStageToggle }: a
 }
 
 function TrackerPanel({ stage, defaultOpen }: any) {
-  const [open, setOpen] = useState(defaultOpen);
+  const [open, setOpen] = useState<boolean>(defaultOpen);
   return (
     <div className="mt-4">
-      <button onClick={() => setOpen((v) => !v)} className="inline-flex items-center gap-2 text-sm font-medium text-gray-800 hover:text-gray-900 focus:outline-none">
+      <button onClick={() => setOpen((prev: boolean) => !prev)} className="inline-flex items-center gap-2 text-sm font-medium text-gray-800 hover:text-gray-900 focus:outline-none">
         <ChevronDown className={`h-4 w-4 transition-transform ${open ? 'rotate-180' : ''}`} />
         {open ? 'Hide' : 'Show'} week-by-week tracker
       </button>
@@ -342,7 +342,7 @@ function TrackerPanel({ stage, defaultOpen }: any) {
 
 function TaskCheckbox({ stageKey, index, text }: any) {
   const storageKey = `roadmap-progress-${stageKey}-${index}`;
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState<boolean>(false);
   useEffect(() => {
     try { const saved = localStorage.getItem(storageKey); if (saved) setChecked(saved === '1'); } catch {}
   }, []);
@@ -360,7 +360,7 @@ function TaskCheckbox({ stageKey, index, text }: any) {
 
 function HoursCounter({ stageKey }: any) {
   const key = `hours-${stageKey}`;
-  const [hours, setHours] = useState(0);
+  const [hours, setHours] = useState<number>(0);
   useEffect(() => {
     try { const saved = localStorage.getItem(key); if (saved) setHours(parseFloat(saved) || 0); } catch {}
   }, []);

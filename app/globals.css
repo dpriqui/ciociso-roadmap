@@ -2,7 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-/* App-wide styles */
-body {
-  @apply text-gray-800;
-}
+body { @apply text-gray-800; }
