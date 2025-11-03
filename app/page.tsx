@@ -13,13 +13,34 @@ function RoadmapVisual() {
   const roadmap = useMemo(() => ([
     {
       year: "2025 (Q4)",
-      focus: "Starting Point – Intune Certification & Azure Foundations",
-      certs: ["Intune Administrator (MD-102)"],
-      milestone: "Complete MD-102 by end of December 2025",
+      focus: "Starting Point – Azure Administrator Associate (AZ-104)",
+      certs: ["Azure Administrator Associate (AZ-104)"],
+      milestone: "Pass AZ-104 by mid-December 2025",
       salaryRange: "$110K–$130K (Boston est.)",
       color: "from-blue-500 to-cyan-500",
       icon: GraduationCap,
       status: "active",
+      links: [
+        { label: "Microsoft Learn – AZ-104", href: "https://learn.microsoft.com/certifications/exams/az-104/" },
+        { label: "MeasureUp – AZ-104 Practice", href: "https://www.measureup.com/" },
+        { label: "John Savill – Azure Masterclass", href: "https://www.youtube.com/@NTFAQGuy" },
+      ],
+      scheduleLink: { label: "Schedule AZ-104 (Pearson VUE)", href: "https://home.pearsonvue.com/microsoft" },
+      tracker: [
+        { label: "Week 1", focus: "Identity & Governance", tasks: ["Entra ID tenants, users, groups", "RBAC roles & custom roles", "Azure Policy & management groups"], outcome: "Solid IAM + governance" },
+        { label: "Week 2", focus: "Compute & Networking", tasks: ["VM sizing, images, availability sets/zones", "VNets, subnets, NSGs, UDRs, DNS", "LB/AGW/Bastion basics"], outcome: "Ops-ready infra fundamentals" },
+        { label: "Week 3", focus: "Storage, Backup, Monitor", tasks: ["Blob tiers, lifecycle mgmt, immutability", "Backup/ASR, Updates, Extensions", "Azure Monitor, Log Analytics, alerts"], outcome: "Ops + visibility end-to-end" },
+        { label: "Week 4", focus: "Exam Review & Practice", tasks: ["2–3 timed practice tests", "Close gaps via Learn modules", "Schedule & sit for AZ-104"], outcome: "AZ-104 passed by mid-December 2025" },
+      ],
+    },
+    {
+      year: "2026 (Q1)",
+      focus: "Endpoint Management – Intune Administrator (MD-102)",
+      certs: ["Intune Administrator (MD-102)"],
+      milestone: "Target: complete MD-102 by end of January 2026",
+      salaryRange: "$120K–$140K (Boston est.)",
+      color: "from-sky-500 to-indigo-500",
+      icon: TrendingUp,
       links: [
         { label: "Microsoft Learn – MD-102", href: "https://learn.microsoft.com/certifications/exams/md-102/" },
         { label: "MeasureUp – MD-102 Practice", href: "https://www.measureup.com/" },
@@ -27,20 +48,20 @@ function RoadmapVisual() {
       ],
       scheduleLink: { label: "Schedule MD-102 (Pearson VUE)", href: "https://home.pearsonvue.com/microsoft" },
       tracker: [
-        { label: "Week 1", focus: "Overview & Setup", tasks: ["Review Microsoft Learn MD-102 path", "Create/confirm lab tenant or sandbox access", "Enroll 1–2 test devices (Autopilot if available)"] , outcome: "Environment ready for practice" },
+        { label: "Week 1", focus: "Overview & Setup", tasks: ["Review Microsoft Learn MD-102 path", "Create/confirm lab tenant or sandbox access", "Enroll 1–2 test devices (Autopilot if available)"], outcome: "Environment ready for practice" },
         { label: "Week 2", focus: "Device Management & Policies", tasks: ["Compliance policies & configuration profiles", "ESP & Autopilot profile; device naming conventions", "Pilot deployment to test devices"], outcome: "Confident with deployment & policy mgmt" },
         { label: "Week 3", focus: "Endpoint Security & Monitoring", tasks: ["Security baselines & ASR rules (as appropriate)", "RBAC roles, scopes, and reporting", "Draft operational runbook for Cordia-style environments"], outcome: "Security + troubleshooting fundamentals" },
-        { label: "Week 4", focus: "Exam Review & Practice", tasks: ["2–3 timed practice tests (MeasureUp or equivalent)", "Target weak areas; schedule & sit for MD-102"], outcome: "MD-102 passed by late December 2025" },
+        { label: "Week 4", focus: "Exam Review & Practice", tasks: ["2–3 timed practice tests (MeasureUp or equivalent)", "Target weak areas; schedule & sit for MD-102"], outcome: "MD-102 passed by late January 2026" },
       ],
     },
     {
-      year: "2026 (Q1)",
-      focus: "Azure Solutions Architect Expert & Strategic Pay Growth",
+      year: "2026 (Q2)",
+      focus: "Azure Solutions Architect Expert (AZ-305) – Strategic Pay Growth",
       certs: ["Azure Solutions Architect Expert (AZ-305)"],
-      milestone: "January–March 2026 study window",
+      milestone: "April–June 2026 study window",
       salaryRange: "$135K–$155K (Architect tier)",
-      color: "from-sky-500 to-indigo-500",
-      icon: TrendingUp,
+      color: "from-indigo-500 to-purple-500",
+      icon: ShieldCheck,
       links: [
         { label: "Microsoft Learn – AZ-305", href: "https://learn.microsoft.com/certifications/exams/az-305/" },
         { label: "MeasureUp – AZ-305 Practice", href: "https://www.measureup.com/" },
@@ -52,10 +73,10 @@ function RoadmapVisual() {
         { label: "Week 3", focus: "Data & Storage", tasks: ["Blob/File tiers, immutability, backup", "DB options (SQL MI, Cosmos, PaaS)"] , outcome: "Data architecture clarified" },
         { label: "Week 4", focus: "Security & Monitoring", tasks: ["Key Vault, Managed Identities, Defender for Cloud", "Monitor/Log Analytics, alerting"], outcome: "Security strategy end-to-end" },
         { label: "Week 5", focus: "Integration & Resiliency", tasks: ["BCDR/HA designs, zones vs regions", "DR drills, messaging, decoupling"], outcome: "Resilient architectures documented" },
-        { label: "Week 6", focus: "Practice & Review", tasks: ["Full-length practice exams", "Hands-on labs for weak areas; schedule AZ-305"], outcome: "Ready to pass by mid-March 2026" },
+        { label: "Week 6", focus: "Practice & Review", tasks: ["Full-length practice exams", "Hands-on labs for weak areas; schedule AZ-305"], outcome: "Ready to pass by late June 2026" },
       ],
     },
-    { year: "2026 (Q2–Q4)", focus: "Cybersecurity Architecture & Leadership Foundation", certs: ["Cybersecurity Architect Expert", "CISSP (ISC²)"], milestone: "Mid 2026 completion of CISSP", salaryRange: "$145K–$170K", color: "from-indigo-500 to-purple-500", icon: ShieldCheck },
+    { year: "2026 (Q3–Q4)", focus: "Cybersecurity Architecture & Leadership Foundation", certs: ["Cybersecurity Architect Expert", "CISSP (ISC²)"], milestone: "Mid/late 2026 completion of CISSP", salaryRange: "$145K–$170K", color: "from-indigo-500 to-purple-500", icon: ShieldCheck },
     { year: "2027", focus: "Governance & Risk Mastery", certs: ["CISM (ISACA)"], milestone: "Target completion: late 2027", salaryRange: "$155K–$185K", color: "from-purple-500 to-pink-500", icon: Briefcase },
     { year: "2028", focus: "Operational Excellence & IT Governance", certs: ["ITIL 4 Managing Professional", "CISA (ISACA)"], milestone: "Continuous improvement focus", salaryRange: "$160K–$190K", color: "from-pink-500 to-rose-500", icon: Crown },
     { year: "2029–2030", focus: "Executive & AI Strategy Integration", certs: ["CCISO (EC-Council)", "MIT / Harvard AI for Business Strategy"], milestone: "Executive readiness & strategy immersion", salaryRange: "$180K–$230K+ (Executive)", color: "from-rose-500 to-amber-500", icon: Brain },
@@ -149,7 +170,7 @@ function RoadmapVisual() {
         });
       });
     } catch {}
-    const csv = rows.map(r => r.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(',')).join('\n');
+    const csv = rows.map(r => r.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(',')).join('\\n');
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -187,7 +208,10 @@ function RoadmapVisual() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white p-6">
-      <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">David E. Perez Jr. – CIO / CISO Career Roadmap (2025–2030)</h1>
+      <h1 className="text-3xl font-bold text-center text-gray-800 mb-2">David E. Perez Jr. – CIO / CISO Career Roadmap (2025–2030)</h1>
+      <div className="text-center text-green-700 font-medium text-sm mb-6">
+        Roadmap starts with <strong>Azure Administrator (AZ-104)</strong>, then continues with <strong>Intune (MD-102)</strong> and <strong>Azure Solutions Architect (AZ-305)</strong>.
+      </div>
 
       {/* Top progress bar with animation + export */}
       <Card className={`mx-auto mb-4 max-w-4xl border-0 shadow-sm ${pulse ? 'ring-2 ring-emerald-300' : ''}`}>
@@ -300,7 +324,7 @@ function TimelineItem({ stage, index, total, computeStagePct, onStageToggle }: a
               </div>
             )}
 
-            {isActive && (<p className="mt-3 text-green-600 font-medium text-sm">Roadmap starts here – Intune exam first, Azure prep follows into early 2026.</p>)}
+            {isActive && (<p className="mt-3 text-green-600 font-medium text-sm">Roadmap starts here – Azure Administrator (AZ-104), then Intune (MD-102), then AZ-305.</p>)}
           </CardContent>
         </Card>
       </motion.div>

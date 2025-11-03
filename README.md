@@ -1,14 +1,16 @@
-# CIO/CISO Roadmap (Next.js + Tailwind) — Fixed
+# CIO/CISO Roadmap (Next.js + Tailwind)
 
-This version fixes the TypeScript 'implicit any' error in the toggle callback.
+**Order:** AZ-104 → MD-102 → AZ-305. Interactive progress tracking with CSV export.
 
-## Local
+## Run locally
 ```bash
 npm install
 npm run dev
+# http://localhost:3000
 ```
 
-## Vercel
-1. Push this folder to a GitHub repo
-2. Import in Vercel → New Project
-3. Deploy (Next.js defaults are fine)
+## Update GitHub to deploy on Vercel
+1. Download and unzip.
+2. Replace your repo contents with these files.
+3. Commit & push to the branch Vercel builds (usually `main`).
+4. Vercel will auto-build; open your project URL when done.
